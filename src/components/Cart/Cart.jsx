@@ -10,6 +10,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
     const classes = useStyles();
 
     const EmptyCart = () => {
+        return
         <Typography variant="subtitle1">
             You have no items in your shopping cart,
             <Link to="/" className={classes.link}>Start adding some</Link>!
@@ -37,7 +38,9 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
                 onClick={handleEmptyCart}
                 >Empty Cart</Button> 
 
-                <Button className={classes.checkoutButton} size="large" 
+                <Button
+                component={Link} to="/checkout"
+                className={classes.checkoutButton} size="large" 
                 type="button" 
                 variant="contained" 
                 color="primary">Checkout</Button>

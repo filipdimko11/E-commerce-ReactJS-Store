@@ -1,5 +1,5 @@
 import './App.css';
-import { Products, Navbar, Cart} from './components'
+import { Products, Navbar, Cart, Checkout} from './components'
 import { commerce } from './lib/commerce'
 import { useState, useEffect }from "react"
 import { SettingsApplicationsRounded } from '@material-ui/icons';
@@ -62,6 +62,10 @@ function App() {
               handleRemoveFromCart={handleRemoveFromCart}
               handleEmptyCart={handleEmptyCart}
               />
+            }>
+            </Route>
+            <Route exact path="/checkout" element={
+              <Checkout/>
             }>
             </Route>
         </Routes>
