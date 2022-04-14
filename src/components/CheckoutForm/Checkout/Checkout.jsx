@@ -13,7 +13,9 @@ const Checkout = () => {
     const classes = useStyles();
 
     const Confirmation = () => {
-        <div>Confirmation</div>
+        <div>
+            Confirmation
+        </div>
     }
 
     const Form = () => activeStep === 0
